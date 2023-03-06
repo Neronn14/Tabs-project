@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.direction-column{
+  flex-direction: column;
+}
+
+.justify-content-end{
+    justify-content: end;
+}
+
+.align-content-center{
+    align-content: center;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-self-center{
+    align-self: center;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+[class^="col-"], 
+[class*=" col-"]{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* 1/12 */
+.col-1{
+    width: calc(100%/12);
+}
+
+/* 2/12 */
+.col-2{
+    width: calc(100%/6);
+}
+
+/* 3/12 */
+.col-3{
+    width: calc(100%/4);
+}
+
+/* 4/12 */
+.col-4{
+    width: calc(100%/3);
+}
+
+/* 5/12 */
+.col-5{
+    width: calc(5*100%/12);
+}
+
+/* 6/12 */
+.col-6{
+    width: calc(100%/2);
+}
+
+/* 7/12 */
+.col-7{
+    width: calc(7*100%/12);
+}
+
+/* 8/12 */
+.col-8{
+    /* width: calc(8*100%/12); */
+    width: calc(2*100%/3);
+}
+
+/* 9/12 */
+.col-9{
+    /* width: calc(9*100%/12); */
+    width: calc(3*100%/4);
+}
+
+/* 10/12 */
+.col-10{
+    /* width: calc(10*100%/12); */
+    width: calc(5*100%/6);
+}
+
+/* 11/12 */
+.col-11{
+    width: calc(11*100%/12);
+}
+
+/* 12/12 */
+.col-12{
+    width: 100%;
+}
+
+.bg-gray{
+    background-color: #656767;
+}
+
+.bg-white{
+    background-color: #ddd;
+}
+
+.bg-red{
+    background-color: #db2147;
+}
+
+.bg-green{
+    background-color: #3FA20D;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+.bg-darkblue{
+    background-color: #002775;
+}
+
+.bg-black{
+    background-color: #111;
+}
+
+.bg-orange{
+    background-color: #E89B02;
+}
+
+
+body{
+    background-color: hsl(205, 100%, 96%);
+}
+
+/* Header section */
+
+#tabs-logo{
+    background-color: #555;
+    /* position: fixed; */
+    width: 100%;
+    /* z-index: 100; */
+    padding-bottom: 20px;
+}
+
+.logo{
+    margin-top: 20px;
+}
+
+.logo__name{
+    text-decoration: none;
+    color: hsl(205, 100%, 96%);
+    font-size: 25px;
+    text-transform: uppercase;  
+    font-weight: 500;
+}
+
+.logo__name:hover{
+    color: #E89B02;
+    transition: .3s ease-in;
+    /* opacity: 0.7; */
+}
+
+
+.tabs{
+    margin-top: 20px;
+}
+
+/* .btn{
+    cursor: pointer;
+    color: hsl(205, 100%, 96%);
+} */
+
+/* .btn:hover{
+    transition: .3s ease-in;
+    color: #E89B02;
+} */
+
+.btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #E89B02;
+    transition: width .3s ease-in;
+  }
+  
+  .btn:hover::after {
+    width: 100%;
+  }
+
+.btn .icon{
+    font-size: 40px;
+    text-decoration: none;
+    color: hsl(205, 100%, 96%);
+}
+
+.btn .icon:hover{
+    transition: .3s ease-in;
+    color: #E89B02;
+    /* opacity: 0.7; */
+}
+
+/* Card-sections */
+.card{
+    margin-top: 40%;
+    margin-bottom: 20px;
+    border: 0.5px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    /* display: flex; */
+    /* display: block; */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    overflow: hidden;
+    transition: transform .5s cubic-bezier(.35,.72,.42,.83);
+    /* display: none; */
+}
+
+
+.card:hover{
+    /* box-shadow: 0 0 20px 7px rgba(211, 211, 211, .75); */
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
+    border: none;
+    transform: translateY(-20px);
+}
+/* .bmw{
+    display: none;
+}
+
+.mercedes{
+    display: none;
+}
+
+.volkswagen{
+    display: none;
+} */
+
+
+.card__top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+    position: relative;   
+}
+
+.card__top img{
+    width: 100%;
+    object-fit: contain;
+    padding-bottom: 55px;
+    border-radius: 5px 5px 0 0;
+    transition: .2s;
+}
+
+.card__top img:hover{
+    transform: scale(1.1);
+}
+
+.card__top .icon-heart{
+    font-size: 26px;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.25);
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.card__top .icon-heart:hover{
+    color: red;
+    transition: .2s;
+}
+
+.card__bottom{
+    padding: 0 32px 10px;
+}
+
+.card__brand{
+    font-size: 24px;
+    color: #555;
+}
+
+.card__price{
+    font-size: 20px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.card__common-header{
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.card__secondary-text{
+    color:#555;
+    font-size: 16px;
+
+}
+
+.card__color-circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+/* card show */
+/* .card-show{
+    display: flex;
+}
+
+.bmw-show{
+    display: flex;
+}
+
+.mercedes-show{
+    display: flex;
+}
+
+.volkswagen-show{
+    display: flex;
+}   
+ */
+
+/* info */
+#info{
+    background-color: #555;
+    width: 100%;
+    padding-bottom: 4rem;
+
+}
+
+.info{
+    padding-top: 3rem;
+}
+
+.info__icon{
+    font-size: 17px;
+    text-decoration: none;
+    color: hsl(205, 100%, 96%);
+    margin: 6px 0;
+    transition: transform .5s cubic-bezier(.35,.72,.42,.83);
+}
+
+.info__icon:hover i{
+    /* padding-right: 5px; */
+    transition: .5s;
+    /* transform: translateX(-20px); */
+}
+
+.profile{
+    /* overflow: hidden; */
+    cursor: pointer;
+}
+
+.profile:hover .profile__name{
+    color: #E89B02;
+    transition: .3s;
+}
+
+.profile__img{
+    overflow: hidden;
+    width: 70%;
+    /* box-shadow: 0 0 20px 7px #555; */
+    /* border: 0.5px solid #ddd; */
+    border-radius: 10px;
+    margin: 0 55px;
+    line-height: 0;
+    /* transition: .3s; */
+}
+
+.profile__img img{
+    width: 100%;
+    object-fit: contain;
+    transition: .3s;
+}
+
+
+
+.profile__img img:hover{
+    width: 100%;
+    transform: scale(1.1);
+}
+
+.profile__name{
+    font-size: 2.2rem;
+    color: hsl(205, 100%, 96%);
+    margin: 0 55px;
+}
+
+
+
+@media screen and (max-width: 768px){
+    .col-md-3{
+        width: 25%;
+    }
+    
+    .col-md-6{
+        width: 50%;
+    }
+    
+    .col-md-9{
+        width: 75%;
+    }
+
+    .col-md-12{
+        width: 100%;
+    }   
+    
+}
+
+@media screen and (max-width: 576px){
+    .col-sm-3{
+        width: 25%;
+    }
+    
+    .col-sm-6{
+        width: 50%;
+    }
+    
+    .col-sm-9{
+        width: 75%;
+    }
+
+    .col-sm-12{
+        width: 100%;
+    }   
+
+
+    #tabs-logo{
+    background-color: #555;
+    /* position: fixed; */
+    width: 1000px;
+    /* z-index: 100; */
+    padding-bottom: 20px;
+}
+}
+
+
+    </style>
+</head>
+<body>
+    <header id="tabs-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 d-flex align-items-center">
+                    <div class="logo">
+                        <a href="#" class="logo__name">car shopping</a>
+                    </div>  
+                </div>
+                <div class="col-9">
+                    <ul class="tabs d-flex justify-content-between">
+                        <li class="btn btn-bmw" >
+                            Bmw
+                            <a href="" class="icon">
+                                <i class=" icon-icons8-bmw"></i>
+                            </a>
+                        </li>
+                        <li class="btn btn-mercedes">
+                            Mercedes
+                            <a href="" class="icon">
+                                <i class=" icon-mercedes-1"></i>
+                            </a>
+                        </li>
+                        <li class="btn btn-wolksvagen">
+                            Wolksvagen
+                            <a href="" class="icon">
+                                <i class=" icon-icons8-volkswagen"></i>
+                            </a>
+                        </li>
+                        <li class="btn btn-all-cars">
+                            <a href="" class="icon">
+                                <i class=" icon-car-tire-wheel-icon"></i>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <section id="cards-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card bmw" data-filter="bmw">
+                        <div class="card__top">
+                            <img src="./img/bmw-1.jpg"  alt="BMW 328">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        BMW 328
+                                    </div>
+                                </div>
+                                <span class="card__price">21 500 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2014, 2.0 L, 100 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card bmw" data-filter="bmw">
+                        <div class="card__top">
+                            <img src="./img/bmw-2.jpg" alt="BMW 530">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        BMW 530
+                                    </div>
+                                </div>
+                                <span class="card__price">27 000 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2008, 2.0 L, 188 600 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-black"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card bmw" data-filter="bmw">
+                        <div class="card__top">
+                            <img src="./img/bmw-3.jpg" alt="BMW 528">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        BMW 528
+                                    </div>
+                                </div>
+                                <span class="card__price">33 900 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2013, 2.0 L, 137 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-black"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mercedes" data-filter="mercedes">
+                        <div class="card__top">
+                            <img src="./img/mercedes-1.jpg" alt="Mercedes E 320">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Mercedes E 320
+                                    </div>
+                                </div>
+                                <span class="card__price">20 500 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2004, 3.2 L, 400 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-black"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mercedes" data-filter="mercedes">
+                        <div class="card__top">
+                            <img src="./img/mercedes-2.jpg" alt="Mercedes E 200">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Mercedes E 200
+                                    </div>
+                                </div>
+                                <span class="card__price">27 400 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2011, 2.0 L, 199 500 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-black"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mercedes" data-filter="mercedes">
+                        <div class="card__top">
+                            <img src="./img/mercedes-3.jpg" alt="Mercedes E 220">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Mercedes E 220
+                                    </div>
+                                </div>
+                                <span class="card__price">42 300 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2014, 2.2 L, 177 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card volkswagen" data-filter="wolksvagen">
+                        <div class="card__top">
+                            <img src="./img/volkswagen-1.jpg" alt="Volkswagen Golf">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Volkswagen Golf
+                                    </div>
+                                </div>
+                                <span class="card__price">17 000 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2011, 1.6 L, 142 200 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-darkblue"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card volkswagen" data-filter="wolksvagen">
+                        <div class="card__top">
+                            <img src="./img/volkswagen-2.jpg" alt="Volkswagen Jetta">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Volkswagen Jetta
+                                    </div>
+                                </div>
+                                <span class="card__price">11 900 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">22010, 1.6 L, 150 000 km"</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card volkswagen" data-filter="wolksvagen">
+                        <div class="card__top">
+                            <img src="./img/volkswagen-3.jpg" alt="Volkswagen Polo">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Volkswagen Polo
+                                    </div>
+                                </div>
+                                <span class="card__price">30 700 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2021, 1.6 L, 20 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="info">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="info sosial d-flex direction-column">
+                    <a href="#" class="info__icon"><i class="icon-facebook"></i> facebook</a>
+                    <a href="#" class="info__icon"><i class="icon-instagram"></i> instagram</a>
+                    <a href="#" class="info__icon"><i class="icon-twitter"></i> twitter</a>
+                    <a href="#" class="info__icon"><i class="icon-linkedin"></i> linkedin</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="info profile">
+                   <div class="profile__img"><img src="./img/Alisahib Rasulov.jpg" alt=""></div>
+                    <h3 class="profile__name">Alisahib Rasulov</h3>
+                </div>
+            </div>
+            <div class="col-4 d-flex justify-content-end">
+                <div class="info contact d-flex direction-column">
+                    <a href="#" class="info__icon"><i class="icon-mobile"></i> +994-77-598-43-17</a>
+                    <a href="#" class="info__icon"><i class="icon-mobile"></i> +994-50-218-98-71 </a>
+                    <a href="#" class="info__icon"><i class="icon-mail3"></i> ralisahib@bk.ru</a>
+                    <a href="#" class="info__icon"><i class="icon-location"></i> baku, azerbaijan </a> 
+               </div>
+            </div>    
+    </div>
+  </div>  
+</footer>
+</body>
+</html>

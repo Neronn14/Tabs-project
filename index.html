@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./reset.css">
+    <link rel="stylesheet" href="./icon.css">
+    <link rel="stylesheet" href="./icon-2.css">
+    <!-- <link rel="stylesheet" href="./Bootstrap.css"> -->
+    <link rel="stylesheet" href="./main.css">
+    <title>Tabs</title>
+</head>
+<body>
+    <header id="tabs-logo">
+        <div class="container">
+            <div class="row">
+                <div class="col-3 d-flex align-items-center">
+                    <div class="logo">
+                        <a href="./index.html" class="logo__name">car shopping</a>
+                    </div>  
+                </div>
+                <div class="col-9">
+                    <ul class="tabs filter d-flex justify-content-between">
+                        <li class="btn btn-bmw icon-icons8-bmw" data-filter="bmw"> 
+                            <!-- <a href="" class="icon">
+                                <i class=" icon-icons8-bmw"></i>
+                            </a>
+                            Bmw -->
+                        </li>
+                        <li class="btn btn-mercedes icon-mercedes-1" data-filter="mercedes">
+                            <!-- <a href="" class="icon">
+                                <i class=" icon-mercedes-1"></i>
+                            </a>
+                            Mercedes -->
+                        </li>
+                        <li class="btn btn-volksvagen icon-icons8-volkswagen" data-filter="volkswagen">
+                            <!-- <a href="" class="icon ">
+                                <i class="icon-icons8-volkswagen " ></i>
+                            </a> -->
+                        
+                        </li>
+                        <li class="btn btn-all-cars icon-car-tire-wheel-icon" data-filter="all">
+                            <!-- <a href="" class="icon">
+                                <i class=" icon-car-tire-wheel-icon"></i>
+                            </a> -->
+                            <!-- All -->
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+<main>
+    <section id="cards-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card bmw">
+                        <div class="card__top">
+                            <img src="./img/bmw-1.jpg"  alt="BMW 328">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        BMW 328
+                                    </div>
+                                </div>
+                                <span class="card__price">21 500 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2014, 2.0 L, 100 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card bmw">
+                        <div class="card__top">
+                            <img src="./img/bmw-2.jpg" alt="BMW 530">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        BMW 530
+                                    </div>
+                                </div>
+                                <span class="card__price">27 000 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2008, 2.0 L, 188 600 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-black"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card bmw">
+                        <div class="card__top">
+                            <img src="./img/bmw-3.jpg" alt="BMW 528">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        BMW 528
+                                    </div>
+                                </div>
+                                <span class="card__price">33 900 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2013, 2.0 L, 137 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-black"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mercedes">
+                        <div class="card__top">
+                            <img src="./img/mercedes-1.jpg" alt="Mercedes E 320">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Mercedes E 320
+                                    </div>
+                                </div>
+                                <span class="card__price">20 500 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2004, 3.2 L, 400 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-black"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mercedes">
+                        <div class="card__top">
+                            <img src="./img/mercedes-2.jpg" alt="Mercedes E 200">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Mercedes E 200
+                                    </div>
+                                </div>
+                                <span class="card__price">27 400 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2011, 2.0 L, 199 500 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-black"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card mercedes">
+                        <div class="card__top">
+                            <img src="./img/mercedes-3.jpg" alt="Mercedes E 220">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Mercedes E 220
+                                    </div>
+                                </div>
+                                <span class="card__price">42 300 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2014, 2.2 L, 177 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card volkswagen">
+                        <div class="card__top">
+                            <img src="./img/volkswagen-1.jpg" alt="Volkswagen Golf">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Volkswagen Golf
+                                    </div>
+                                </div>
+                                <span class="card__price">17 000 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2011, 1.6 L, 142 200 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-darkblue"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card volkswagen">
+                        <div class="card__top">
+                            <img src="./img/volkswagen-2.jpg" alt="Volkswagen Jetta">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Volkswagen Jetta
+                                    </div>
+                                </div>
+                                <span class="card__price">11 900 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">22010, 1.6 L, 150 000 km"</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card volkswagen">
+                        <div class="card__top">
+                            <img src="./img/volkswagen-3.jpg" alt="Volkswagen Polo">
+                            <div class="icon-heart"></div>
+                        </div>
+                        <div class="card__bottom">
+                            <div class="d-flex justify-content-between">
+                                <div class="d-flex flex-column">
+                                    <div class="card__brand">
+                                        Volkswagen Polo
+                                    </div>
+                                </div>
+                                <span class="card__price">30 700 Azn</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Details</h6>
+                                <span class="card__secondary-text">2021, 1.6 L, 20 000 km</span>
+                            </div>
+                            <div>
+                                <h6 class="card__common-header" style="margin-top: 16px; margin-bottom: 8px;">Color</h6>
+                                <span class="card__color-circle bg-white"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer id="info">
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="info sosial d-flex direction-column">
+                    <a href="https://www.facebook.com/elisahibr?mibextid=ZbWKwL" target="self" class="info__icon"><i class="icon-facebook"></i> facebook</a>
+                    <a href="https://www.instagram.com/rs_alisahib/" target="self" class="info__icon"><i class="icon-instagram"></i> instagram</a>
+                    <a href="#" class="info__icon"><i class="icon-twitter"></i> twitter</a>
+                    <a href="https://www.linkedin.com/in/alisahib-rasulov-499674243" target="self" class="info__icon"><i class="icon-linkedin"></i> linkedin</a>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="info profile">
+                   <div class="profile__img"><img src="./img/Alisahib Rasulov.jpg" alt=""></div>
+                    <h3 class="profile__name">Alisahib Rasulov</h3>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="info contact d-flex direction-column">
+                    <a href="#" class="info__icon contact__item"><i class="icon-mobile"></i> +994-77-598-43-17 </a>
+                    <a href="#" class="info__icon contact__item"><i class="icon-mobile"></i> +994-50-218-98-71 </a>
+                    <a href="#" class="info__icon contact__item"><i class="icon-mail3"></i> ralisahib@bk.ru </a>
+                    <a href="#" class="info__icon contact__item"><i class="icon-location"></i> baku, azerbaijan </a> 
+               </div>
+            </div>    
+    </div>
+  </div>  
+</footer>
+    
+    <script src="./app.js"></script>
+</body>
+</html>

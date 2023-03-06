@@ -1,0 +1,460 @@
+@import url('https://fonts.googleapis.com/css2?family=Calligraffitti&family=Raleway:wght@100;200;300;400;500;600;700;800;900&family=Roboto:wght@400;500;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif !important;
+}
+
+.d-flex{
+    display: flex;
+}
+
+.justify-content-between{
+    justify-content: space-between;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+
+.direction-column{
+  flex-direction: column;
+}
+
+.justify-content-end{
+    justify-content: end;
+}
+
+.align-content-center{
+    align-content: center;
+}
+
+.flex-column{
+    flex-direction: column;
+}
+
+.align-items-center{
+    align-items: center;
+}
+
+.align-self-center{
+    align-self: center;
+}
+
+.container{
+    width: 1170px;
+    margin: 0 auto;
+}
+
+.container-fluid{
+    width: 100%;
+}
+
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -12px;
+    margin-right: -12px;
+}
+
+[class^="col-"], 
+[class*=" col-"]{
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+/* 1/12 */
+.col-1{
+    width: calc(100%/12);
+}
+
+/* 2/12 */
+.col-2{
+    width: calc(100%/6);
+}
+
+/* 3/12 */
+.col-3{
+    width: calc(100%/4);
+}
+
+/* 4/12 */
+.col-4{
+    width: calc(100%/3);
+}
+
+/* 5/12 */
+.col-5{
+    width: calc(5*100%/12);
+}
+
+/* 6/12 */
+.col-6{
+    width: calc(100%/2);
+}
+
+/* 7/12 */
+.col-7{
+    width: calc(7*100%/12);
+}
+
+/* 8/12 */
+.col-8{
+    /* width: calc(8*100%/12); */
+    width: calc(2*100%/3);
+}
+
+/* 9/12 */
+.col-9{
+    /* width: calc(9*100%/12); */
+    width: calc(3*100%/4);
+}
+
+/* 10/12 */
+.col-10{
+    /* width: calc(10*100%/12); */
+    width: calc(5*100%/6);
+}
+
+/* 11/12 */
+.col-11{
+    width: calc(11*100%/12);
+}
+
+/* 12/12 */
+.col-12{
+    width: 100%;
+}
+
+.bg-gray{
+    background-color: #656767;
+}
+
+.bg-white{
+    background-color: #ddd;
+}
+
+.bg-red{
+    background-color: #db2147;
+}
+
+.bg-green{
+    background-color: #3FA20D;
+}
+
+.bg-blue{
+    background-color: blue;
+}
+
+.bg-darkblue{
+    background-color: #002775;
+}
+
+.bg-black{
+    background-color: #111;
+}
+
+.bg-orange{
+    background-color: #E89B02;
+}
+
+
+body{
+    background-color: hsl(205, 100%, 96%);
+}
+
+/* Header section */
+
+#tabs-logo{
+    background-color: #555;
+    width: 100%;
+    padding-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
+}
+
+.logo{
+    margin-top: 20px;
+}
+
+.logo__name{
+    text-decoration: none;
+    color: hsl(205, 100%, 96%);
+    font-size: 25px;
+    text-transform: uppercase;  
+    font-weight: 500;
+}
+
+.logo__name:hover{
+    color: #E89B02;
+    transition: .3s ease-in;
+    /* opacity: 0.7; */
+}
+
+
+.tabs{
+    margin-top: 20px;
+}
+
+.btn{
+    font-size: 40px;
+    text-decoration: none;
+    color: hsl(205, 100%, 96%);
+}
+
+.btn:hover{
+    transition: .3s ease-in;
+    color: #E89B02;
+    cursor: pointer;
+}
+
+.btn::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 1px;
+    background: #E89B02;
+    transition: width .3s ease-in;
+  }
+  
+  .btn:hover::after {
+    width: 100%;
+  }
+
+/* .btn .icon{
+    font-size: 40px;
+    text-decoration: none;
+    color: hsl(205, 100%, 96%);
+}
+
+.btn .icon:hover{
+    transition: .3s ease-in;
+    color: #E89B02;
+} */
+
+/* Card-sections */
+#card-section{
+    min-height: 1000vh;
+}
+
+
+.card{
+    margin-top: 40%;
+    margin-bottom: 20px;
+    border: 0.5px solid #ddd;
+    border-radius: 5px;
+    width: 100%;
+    /* display: flex; */
+    /* display: block; */
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: white;
+    overflow: hidden;
+    transition: transform .5s cubic-bezier(.35,.72,.42,.83);
+    /* display: none; */
+}
+
+
+.card:hover{
+    /* box-shadow: 0 0 20px 7px rgba(211, 211, 211, .75); */
+    box-shadow: 7px 7px 20px rgba(0, 0, 0, 0.2);
+    border: none;
+    transform: translateY(-20px);
+}
+
+.card__top{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 320px;
+    position: relative;   
+}
+
+.card__top img{
+    width: 100%;
+    object-fit: contain;
+    padding-bottom: 55px;
+    border-radius: 5px 5px 0 0;
+    transition: .2s;
+}
+
+.card__top img:hover{
+    transform: scale(1.1);
+}
+
+.card__top .icon-heart{
+    font-size: 26px;
+    position: absolute;
+    color: rgba(0, 0, 0, 0.25);
+    right: 10px;
+    top: 10px;
+    cursor: pointer;
+}
+
+.card__top .icon-heart:hover{
+    color: red;
+    transition: .2s;
+}
+
+.card__bottom{
+    padding: 0 32px 10px;
+}
+
+.card__brand{
+    font-size: 24px;
+    color: #555;
+}
+
+.card__price{
+    font-size: 20px;
+    color: #555;
+    text-transform: uppercase;
+}
+
+.card__common-header{
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #222;
+}
+
+.card__secondary-text{
+    color:#555;
+    font-size: 16px;
+
+}
+
+.card__color-circle{
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.hide {
+    display: none;
+  }
+  
+
+/* info */
+
+#info{
+    background-color: #555;
+    width: 100%;
+    padding-bottom: 4rem;
+
+}
+
+.info{
+    padding-top: 3rem;
+}
+
+.info__icon{
+    font-size: 14px;
+    text-decoration: none;
+    color: hsl(205, 100%, 96%);
+    margin: 25px 0;
+    transition: transform .5s cubic-bezier(.35,.72,.42,.83);
+}
+
+.info__icon:hover{
+    color: #E89B02;
+}
+
+.info__icon:hover i{
+    padding-right: 8px;
+    transition: .3s;
+    /* transform: translateX(20px); */
+}
+
+.profile{
+    /* overflow: hidden; */
+    cursor: pointer;
+}
+
+.profile:hover .profile__name{
+    color: #E89B02;
+    transition: .3s;
+}
+
+.profile__img{
+    overflow: hidden;
+    width: 70%;
+    /* box-shadow: 0 0 20px 7px #555; */
+    /* border: 0.5px solid #ddd; */
+    border-radius: 50%;
+    margin: 0 55px;
+    line-height: 0;
+    /* transition: .3s; */
+}
+
+.profile__img img{
+    width: 100%;
+    object-fit: contain;
+    transition: .3s;
+}
+
+
+
+.profile__img img:hover{
+    width: 100%;
+    transform: scale(1.1);
+}
+
+.profile__name{
+    font-size: 2.2rem;
+    color: hsl(205, 100%, 96%);
+    margin: 0 55px;
+}
+
+
+.contact__item{
+    margin-left: 14rem;
+}
+
+
+@media screen and (max-width: 768px){
+    .col-md-3{
+        width: 25%;
+    }
+    
+    .col-md-6{
+        width: 50%;
+    }
+    
+    .col-md-9{
+        width: 75%;
+    }
+
+    .col-md-12{
+        width: 100%;
+    }   
+    
+}
+
+@media screen and (max-width: 576px){
+    .col-sm-3{
+        width: 25%;
+    }
+    
+    .col-sm-6{
+        width: 50%;
+    }
+    
+    .col-sm-9{
+        width: 75%;
+    }
+
+    .col-sm-12{
+        width: 100%;
+    }   
+}
+
+
+
+/* cars brand svg icons --> https://icons8.com/icons/set/car-brand */
+
+/* https://www.figma.com/file/s2qEqusHX8W7YPq4dP2cfn/Car-Brands-Logos-(Community)?node-id=2%3A2021&t=sOXLqMAT5MOH1wN2-0 */
+/* https://www.figma.com/community/file/1003707998075963846 */
